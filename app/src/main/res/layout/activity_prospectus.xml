@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Assignment3.Prospectus">
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="com.example.studentapp.Assignment3.ProspectusFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

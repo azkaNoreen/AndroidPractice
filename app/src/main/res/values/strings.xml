@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">StudentApp</string>
+    <string name="Welcome">Student Form Data</string>
+    <string name="name">Name: Azka Noreen</string>
+    <string name="department">Department: PUCIT</string>
+    <string name="gender">Gender: Female</string>
+    <string name="email">Email: azka.noreen6@gmail.com</string>
+    <string name="phone">Phone: 03076465114</string>
+    <string name="login">Login Form</string>
+    <string name="password">Password:</string>
+    <string name="user_name">Name:</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello to my fragment Pros</string>
+    <string name="this_is_fragment_b">This is fragment B</string>
+    <string name="ok">OK</string>
+    <string name="cancel">CANCEL</string>
+
+</resources>

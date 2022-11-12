@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".lab6.SharedPref">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sname"
+        android:hint="Username "></EditText>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sname"
+        android:id="@+id/spass"
+        android:hint="User Password"></EditText>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spass"
+        android:text="Show"
+        android:id="@+id/sshow"></Button>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sshow"
+        android:text="Submit"
+        android:id="@+id/ssub"></Button>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/gname"
+        android:layout_below="@+id/ssub"
+        android:layout_margin="5dp">
+    </TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/gpass"
+        android:layout_below="@+id/gname"
+        android:layout_margin="5dp">
+    </TextView>
+</RelativeLayout>

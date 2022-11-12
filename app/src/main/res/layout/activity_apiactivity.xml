@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".lab10.APIActivity">
+
+    <Button
+        android:id="@+id/apiButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="15sp"
+        android:text="Button" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/apiButton"
+        android:layout_margin="10sp"
+        android:layout_marginLeft="44sp"
+        android:layout_marginRight="44sp"
+        android:textSize="22sp"
+
+        android:text="TextView" />
+
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Assignment3.Departments">
+
+    <Button
+        android:id="@+id/change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click to View about Computer Science"
+        android:layout_centerHorizontal="true"
+ />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/change"
+        android:id="@+id/Fragment_container">
+
+    </FrameLayout>
+</RelativeLayout>

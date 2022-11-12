@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Assignment3.Menu">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ABout Us"
+        android:id="@+id/prospectus"
+        ></Button>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Our departments"
+        android:id="@+id/departmemts"
+        android:layout_below="@+id/prospectus"
+        ></Button>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Our Shifts"
+        android:id="@+id/shifts"
+        android:layout_below="@+id/departmemts"
+        ></Button>
+
+</RelativeLayout>

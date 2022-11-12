@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".assignment4.Base">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Students"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        android:layout_margin="24dp"
+        android:id="@+id/stu"
+        android:layout_centerHorizontal="true"
+        ></TextView>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="540dp"
+        android:id="@+id/LoginFragment_container"
+        android:layout_below="@+id/stu"
+        ></FrameLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DONE"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/black"
+        android:layout_below="@+id/LoginFragment_container"
+        android:layout_gravity="bottom"
+        ></Button>
+</RelativeLayout>

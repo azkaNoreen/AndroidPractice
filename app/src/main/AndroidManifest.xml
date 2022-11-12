@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.studentapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.StudentApp">
+        <activity
+            android:name=".lab13.Notification"
+            android:exported="false"
+            android:launchMode="singleTask"
+            />
+        <activity
+            android:name=".lab10.APIActivity"
+            android:exported="false" />
+        <activity
+            android:name=".whatsappToolbar.WhatsappToolbar"
+            android:exported="false" />
+        <activity
+            android:name=".lab9.ToolbarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".lab6.database.InsertStudent"
+            android:exported="false" />
+        <activity
+            android:name=".lab4.StudentView"
+            android:exported="false" />
+        <activity
+            android:name=".lab6.SharedPref"
+            android:exported="false" />
+        <activity
+            android:name=".assignment4.LoginAssignment4"
+            android:exported="false" />
+        <activity
+            android:name=".assignment1.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".assignment4.SignUpAssignment4"
+            android:exported="false" />
+        <activity
+            android:name=".assignment4.Base"
+            android:exported="false" />
+        <activity
+            android:name=".lab3.StudentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".lab5.ViewPagerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Assignment3.Shifts"
+            android:exported="false" />
+        <activity
+            android:name=".Assignment3.Departments"
+            android:exported="false" />
+        <activity
+            android:name=".Assignment3.Prospectus"
+            android:exported="false" />
+        <activity
+            android:name=".Assignment3.Menu"
+            android:exported="false" />
+        <activity
+            android:name=".Assignment2.Login"
+            android:exported="false" />
+        <activity
+            android:name=".lab8.MyDialog"
+            android:exported="false" />
+    </application>
+
+</manifest>
