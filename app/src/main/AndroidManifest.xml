@@ -12,10 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StudentApp">
         <activity
+            android:name=".lab14.ServiceAct"
+            android:exported="false" />
+
+        <service
+            android:name=".lab14.MyService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
             android:name=".lab13.Notification"
             android:exported="false"
-            android:launchMode="singleTask"
-            />
+            android:launchMode="singleTask" />
         <activity
             android:name=".lab10.APIActivity"
             android:exported="false" />
