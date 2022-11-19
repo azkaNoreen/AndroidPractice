@@ -10,22 +10,24 @@ import android.os.IBinder;
 
 import androidx.annotation.Nullable;
 import androidx.core.app.NotificationCompat;
-import androidx.core.app.NotificationManagerCompat;
 
 import com.example.studentapp.R;
 import com.example.studentapp.lab13.Notification;
 
-public class SecondService extends Service {
+public class NotificationService extends Service {
     private int notificaitionid=100;
 
     @Override
     public void onCreate() {
         super.onCreate();
+        createNotificationChannel();
+        startForeground(notificaitionid,createNotification());
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         return super.onStartCommand(intent, flags, startId);
+
     }
 
     @Override
@@ -38,13 +40,13 @@ public class SecondService extends Service {
     public IBinder onBind(Intent intent) {
         return null;
     }
-    private void createNotification() {
-        Intent intent=new Intent(SecondService.this,Notification.class);
+    private android.app.Notification createNotification() {
+        Intent intent=new Intent(NotificationService.this,Notification.class);
         //for not opening the activity again and again
 //                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        PendingIntent pendingIntent=PendingIntent.getActivity(SecondService.this,0,intent,PendingIntent.FLAG_IMMUTABLE);
+        PendingIntent pendingIntent=PendingIntent.getActivity(NotificationService.this,0,intent,PendingIntent.FLAG_IMMUTABLE);
 
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(SecondService.this,"My_App")
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(NotificationService.this,"My_App")
                 .setSmallIcon(R.drawable.ic_action_menuu)
                 .setContentTitle("This is my Notification")
                 .setContentText("Explanation of notification goes here...")
@@ -52,8 +54,9 @@ public class SecondService extends Service {
                 .setContentIntent(pendingIntent)
                 .setAutoCancel(true);
 
-        NotificationManagerCompat notificationManagerCompat=NotificationManagerCompat.from(SecondService.this);
-        notificationManagerCompat.notify(notificaitionid,builder.build());
+//        NotificationManagerCompat notificationManagerCompat=NotificationManagerCompat.from(SecondService.this);
+//        notificationManagerCompat.notify(notificaitionid,builder.build());
+        return builder.build();// notification object
     }
     private void createNotificationChannel() {
         // Create the NotificationChannel, but only on API 26+ because
