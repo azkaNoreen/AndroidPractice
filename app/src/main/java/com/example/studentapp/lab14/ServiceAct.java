@@ -28,7 +28,9 @@ public class ServiceAct extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent=new Intent(ServiceAct.this, NotificationService.class);
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    startForegroundService(intent);
+                    NotificationService.launchSecondService(ServiceAct.this);
+
+//                    startForegroundService(intent);
                 }else{
                     startService(intent);
                 }
