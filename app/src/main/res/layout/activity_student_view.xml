@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".lab4.StudentView">
-   <TextView
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:id="@+id/text"
-       android:text="This is Recycler View"
-       ></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text"
+        android:text="This is Recycler View"
+        ></TextView>
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -18,5 +18,4 @@
         android:id="@+id/rv"
 
         ></androidx.recyclerview.widget.RecyclerView>
-
 </RelativeLayout>
