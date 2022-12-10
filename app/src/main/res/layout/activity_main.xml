@@ -141,6 +141,24 @@
             android:id="@+id/storage"
             ></Button>
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/fourthdl"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/firstll2"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Menu"
+            android:id="@+id/ii"
+            ></Button>
+
+    </LinearLayout>
 
 
 </RelativeLayout>
