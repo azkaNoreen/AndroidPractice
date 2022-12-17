@@ -16,6 +16,7 @@ import com.example.studentapp.lab14.MyService;
 import com.example.studentapp.lab14.ServiceAct;
 import com.example.studentapp.lab16.StorageActivity;
 import com.example.studentapp.lab17.IntentResult;
+import com.example.studentapp.lab18.FileHandling;
 import com.example.studentapp.lab3.StudentActivity;
 import com.example.studentapp.lab4.StudentView;
 import com.example.studentapp.lab5.ViewPagerActivity;
@@ -24,7 +25,7 @@ import com.example.studentapp.lab8.MyDialog;
 import com.example.studentapp.lab9.ToolbarActivity;
 
 public class MainActivity extends AppCompatActivity {
-    Button menu,login4,fragments,rcv,vp,rdb,dial,toolb,api,noti,service,storage,inverseINtent;
+    Button menu,login4,fragments,rcv,vp,rdb,dial,toolb,api,noti,service,storage,inverseINtent,fh;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
         service=findViewById(R.id.service);
         storage=findViewById(R.id.storage);
         inverseINtent=findViewById(R.id.ii);
+        fh=findViewById(R.id.fh);
+
 
 
 
@@ -138,6 +141,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent in = new Intent(MainActivity.this, IntentResult.class);
+                startActivity(in);
+            }
+        });
+        fh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(MainActivity.this, FileHandling.class);
                 startActivity(in);
             }
         });
