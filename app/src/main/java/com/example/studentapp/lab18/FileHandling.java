@@ -22,7 +22,7 @@ import java.io.IOException;
 import kotlin.io.FileAlreadyExistsException;
 
 public class FileHandling extends AppCompatActivity {
-Button created,createFile,renamFile;
+Button created,createFile,renamFile,delFile;
 EditText name;
     String nam;
     String folderPath;
@@ -37,6 +37,7 @@ EditText name;
         name=findViewById(R.id.name);
         renamFile=findViewById(R.id.renamFile);
         createFile=findViewById(R.id.createFile);
+        delFile=findViewById(R.id.delFile);
 
         nam=name.getText().toString().trim();
 
@@ -60,7 +61,17 @@ EditText name;
             @Override
             public void onClick(View v) {
                 try {
-                    CreateFile(name.getText().toString().trim());
+                    RenameFile(name.getText().toString().trim());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        delFile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    DeleteFile();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -97,9 +108,9 @@ EditText name;
     }
     public void CreateFile(String fileName) throws IOException {
 //        String rootPath = Environment.getExternalStorageDirectory().getAbsolutePath();
-        folderPath=folderPath+"/"+fileName+".txt";
+        filePath=folderPath+"/"+fileName+".txt";
 
-        File file=new File(folderPath);
+        File file=new File(filePath);
         if(!file.exists()){
             if(file.createNewFile())
                 Toast.makeText(this, "File Created Successfully", Toast.LENGTH_SHORT).show();
@@ -108,6 +119,33 @@ EditText name;
         }
         else{
             Toast.makeText(this, "file Already Exists", Toast.LENGTH_SHORT).show();
+        }
+    }
+    public void RenameFile(String renamedFileName) throws IOException {
+
+        File file=new File(filePath);
+        if(file.exists()){
+            if(file.renameTo(new File(folderPath+"/"+renamedFileName+".txt")))
+            {
+                filePath=folderPath+"/"+renamedFileName+".txt";
+            Toast.makeText(this, "File Renamed Successfully", Toast.LENGTH_SHORT).show();}
+            else
+                Toast.makeText(this, "Sorry!not renamed", Toast.LENGTH_SHORT).show();
+        }
+        else{
+            Toast.makeText(this, "file does not exist Exists", Toast.LENGTH_SHORT).show();
+        }
+    }
+    public void DeleteFile() throws IOException {
+
+        File file=new File(filePath);
+        if(file.exists()){
+            file.delete();
+            Toast.makeText(this, "Deleted", Toast.LENGTH_SHORT).show();
+
+        }
+        else{
+            Toast.makeText(this, "file does not exist Exists", Toast.LENGTH_SHORT).show();
         }
     }
     @Override

@@ -38,5 +38,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Rename File" />
+    <Button
+        android:layout_above="@+id/renamFile"
+        android:layout_gravity="center|bottom"
+        android:id="@+id/delFile"
+        android:layout_weight="0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="delete File" />
 
 </RelativeLayout>
