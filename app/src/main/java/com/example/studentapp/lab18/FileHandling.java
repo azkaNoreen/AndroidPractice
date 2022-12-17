@@ -1,5 +1,7 @@
 package com.example.studentapp.lab18;
 
+import static java.lang.String.valueOf;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -17,6 +19,8 @@ import com.example.studentapp.R;
 import com.example.studentapp.lab16.StorageActivity;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 
 import kotlin.io.FileAlreadyExistsException;
@@ -61,7 +65,7 @@ EditText name;
             @Override
             public void onClick(View v) {
                 try {
-                    RenameFile(name.getText().toString().trim());
+                    WriteInFile(name.getText().toString().trim());
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -71,7 +75,7 @@ EditText name;
             @Override
             public void onClick(View v) {
                 try {
-                    DeleteFile();
+                    ReadFromFile();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -137,7 +141,6 @@ EditText name;
         }
     }
     public void DeleteFile() throws IOException {
-
         File file=new File(filePath);
         if(file.exists()){
             file.delete();
@@ -148,6 +151,38 @@ EditText name;
             Toast.makeText(this, "file does not exist Exists", Toast.LENGTH_SHORT).show();
         }
     }
+    public void WriteInFile(String fileText) throws IOException {
+        try{
+            FileOutputStream stream=new FileOutputStream(filePath);
+            try{
+                stream.write(fileText.getBytes());
+            }finally {
+                stream.close();
+            }
+        }
+        catch(Exception e){
+
+        }
+    }
+    public void ReadFromFile() throws IOException {
+        File file=new File(filePath);
+        int size=(int)file.length();
+
+        byte[] array = new byte[(int)file.length()];
+        FileInputStream inputStream = new FileInputStream(filePath);
+
+        try {
+            inputStream.read(array);
+        }catch(Exception e){
+
+        }
+        finally {
+            inputStream.close();
+        }
+        name.setText(new String(array));
+
+    }
+
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
